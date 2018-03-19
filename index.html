@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+<body>
+<h2>Test Note Generator</h2>
+
+<span class="glyphicon glyphicon-home" aria-hidden="true"> <span id="firstPath">Home</span> / Fraud / Comments and Notes</span>
+
+<ul id="nav" class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Add Alert</a>
+  <li role="presentation" class="active"><a href="#">Remove Alert</a>
+</ul>
+
+<form  id="msrForm" action="/" method="post">
+
+<!--------------------------------------FIRST SECTION------------------------------------------>
+<div class="section">
+
+<h5 class="inputTitle">Select all actions<span class="titleEmph"> completed</span></h5>
+
+<fieldset class="inputs">
+
+  <div>
+      <input type="checkbox" id="restriced" name="completed[]" value="THIS & THAT restricted for the following:">
+      <label for="restricted">THIS &amp; THAT restricted for</label>
+      <select name="completed[]">
+        <option value="Reason 1.">Reason 1</option>
+        <option value="Reason 2.">Reason 2</option>
+        <option value="Other.">Other</option>
+      </select>
+      <input type="text" id="otherChoice" name="completed[]" style="display:none"><br>
+  </div>
+  
+  <div>
+      <input type="checkbox" id="member" name="completed[]" value="Advised mbr acct feature canceled.">
+      <label for="member">Member has account feature and advised mbr canceled</label>
+  </div>
+  
+  <div>
+      <input type="checkbox" id="password" name="completed[]" value="password.">
+      <select name="completed[]">
+        <option value="Added">Added</option>
+        <option value="Removed">Removed</option>
+      </select>
+      <label for="password">password</label>
+  </div>
+</fieldset>
+
+</div>
+
+<!-------------------------------------SECOND SECTION---------------------------------------->
+<div class="section">
+
+<h5 class="inputTitle">Select all actions which<span class="titleEmph"> must be completed prior to removing the alert</span></h5>
+
+<fieldset class="inputs">
+  <div>
+    <input type="checkbox" id="resetPass" name="completed[]" value="Reset Online Banking PWs.">
+    <label for="resetPass">Reset Online Banking Passwords</label>
+  </div>
+  <div>
+    <input type="checkbox" id="username" name="completed[]" value="Suggest Username update.">
+    <label for="username">Suggest member update Username</label>
+  </div>
+  <div>
+    <input type="checkbox" id="changePass" name="completed[]" value="Add/Change PW.">
+    <label for="changePass">Add/change password</label>
+  </div>
+</fieldset>
+
+</div>
+
+<!------------------------------------THIRD SECTION------------------------------------------>
+
+<div class="section">
+
+<h5 class="inputTitle">Select additional actions to<span class="titleEmph"> complete after removing the alert</span></h5>
+
+<fieldset class="inputs">
+  <div>
+    <input type="checkbox" id="reset" name="completed[]" value="Reactivate acct feature.">
+    <label for="reset">Reset Online Banking Passwords</label>
+  </div>
+</fieldset>
+
+</div>
+
+<!----------------------------------FOURTH SECTION------------------------------------------>
+
+<div class="section">
+
+<h5 class="inputTitle">Additional helpful information (Ex: suspicious login activity, red flags, etc)</h5>
+
+<div class="inputs">
+
+<textarea name="completed[]" rows="6" cols="115"></textarea>
+
+</div>
+</div>
+
+<!-------------------------------------FIFTH SECTION--------------------------------------------->
+
+<div id="buttons">
+  <button type="submit" id="generateText">Generate Text</button><br>
+  <button type="reset" id="resetForm">Reset Form</button>
+</div>
+
+<div id="textCopy">
+  <button type="submit" id="copy">Copy Notes to Clipboard</button><br>
+  <textarea name="msrForm" id="formInfo" cols="50" rows="10"></textarea>
+</div>
+
+</form>
+
+</body>
+</html>
